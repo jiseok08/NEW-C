@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\uD5C8\uBD09\uC2DD\\source\\repos\\Program\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{02FEDDAA-1D62-4A65-ACFF-A81EA4D5A8A3}|Program.vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\source\\repos\\Program\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02FEDDAA-1D62-4A65-ACFF-A81EA4D5A8A3}|Program.vcxproj|solutionrelative:Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source.c",
+              "DocumentMoniker": "C:\\Users\\\uD5C8\uBD09\uC2DD\\source\\repos\\Program\\Source.c",
+              "RelativeDocumentMoniker": "Source.c",
+              "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\source\\repos\\Program\\Source.c",
+              "RelativeToolTip": "Source.c",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-12-10T09:10:44.189Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
