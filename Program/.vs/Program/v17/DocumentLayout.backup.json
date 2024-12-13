@@ -5,9 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{02FEDDAA-1D62-4A65-ACFF-A81EA4D5A8A3}|Program.vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Program\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{02FEDDAA-1D62-4A65-ACFF-A81EA4D5A8A3}|Program.vcxproj|solutionrelative:Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47949EAC-58D1-435F-A729-819A937091F3}|..\\Class1th (GetAsyncKeyState)\\Class1th (GetAsyncKeyState).vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Class1th (GetAsyncKeyState)\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Source.c",
-              "DocumentMoniker": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Class1th (GetAsyncKeyState)\\Source.c",
-              "RelativeDocumentMoniker": "..\\Class1th (GetAsyncKeyState)\\Source.c",
-              "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Class1th (GetAsyncKeyState)\\Source.c",
-              "RelativeToolTip": "..\\Class1th (GetAsyncKeyState)\\Source.c",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-12-12T10:08:32.845Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,7 +24,7 @@
               "RelativeDocumentMoniker": "Source.c",
               "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Program\\Source.c*",
               "RelativeToolTip": "Source.c*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAADgvyMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-12-10T09:10:44.189Z",
               "EditorCaption": ""
