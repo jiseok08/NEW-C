@@ -27,15 +27,6 @@ int main()
 		Position(x, y);
 		printf("¡Ú");
 
-		if (x < 0)
-		{
-			x += 2;
-		}
-		else if (y < 0)
-		{
-			y++;
-		}
-
 		key = _getch();
 
 		if (key == -32)
@@ -57,6 +48,22 @@ int main()
 			break;
 		}
 
+		if (x < 0)
+		{
+			x += 2;
+		}
+		else if (x > 131)
+		{
+			x -= 2;
+		}
+		if (y < 0)
+		{
+			y++;
+		}
+		else if (y > 41)
+		{
+			y--;
+		}
 		system("cls");
 	}
 
