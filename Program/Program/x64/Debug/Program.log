@@ -1,2 +1,2 @@
 ﻿  Source.c
-  Program.vcxproj -> C:\Users\허지석\Desktop\NEW-C\Program\x64\Debug\Program.exe
+C:\Users\허봉식\Desktop\NEW-C\Program\Source.c(43,2): error C2198: 'BOOL FillConsoleOutputCharacterW(HANDLE,WCHAR,DWORD,COORD,LPDWORD)': 호출에 인수가 너무 적습니다.
