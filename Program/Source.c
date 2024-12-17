@@ -1,108 +1,54 @@
 #include <stdio.h>
-#include <conio.h>
-#include <Windows.h>
+#include <WIndows.h>
 
-#define UP 72
-#define LEFT 75
-#define RIGHT 77
-#define DOWN 80
-
-int screenIndex;
-HANDLE screen[2];
-
-void Initialize()
+enum State
 {
-	CONSOLE_CURSOR_INFO cursor;
+	IDLE,
+	ATTACK,
+	DIE
 
-	// 화면 버터를 2개 생성합니다.
-	screen[0] = CreateConsoleScreenBuffer;
-	(
-		GENERIC_READ | GENERIC_WRITE,
-		0,
-		NULL,
-		CONSOLE_TEXTMODE_BUFFER,
-		NULL
-		);
+	// 열거형에서 중간에 있는 상수의 값을 변경하게 되면
+	// 그 다음에 있는 상수의 값이 변경된 값에서부터 1씩 증가합니다.
+};
 
-	cursor.dwSize = 1;
-	cursor.bVisible = FALSE;
-
-	SetConsoleCursorInfo(screen[0], &cursor);
-	SetConsoleCursorInfo(screen[1], &cursor);
-}
-
-void Flip()
+enum Collar
 {
-	SetConsoleActiveScreenBuffer(screen [screenIndex]);
-
-	screenIndex = !screenIndex;
-}
-
-void Clear()
-{
-	COORD position = { 0,0 };
-	DWORD dword;
-	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-
-	int width = consoleInfo.srWindow.Right - consoleInfo.srWindow.Left + 1;
-
-
-	FillConsoleOutputCharacter(screen[screenIndex],119, 29);
-}
-
-void Position(int x, int y)
-{
-	// x축과 y축을 설정
-	COORD position = {x, y};
-
-	// 커서 위치를 이동하는 함수
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position);
-
-}
+	BLACK,
+	DARKBLUE,
+	DARKGREEN
+};
+// 0 BLACK
+// 1 DARKBLUE
+// 2 DARKGREEN
 
 int main()
 {
-	char key = 0;
-	int x = 0;
-	int y = 0;
+#pragma region 열거형
+	// 고유한 상수 값에 연결된 기호 이름의
+	// 집합입니다.
 
-	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
+	int HP = 0;
 
-	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-	GetConsoleScreenBufferInfo(handle, &consoleInfo);
-	printf("%d\n", consoleInfo.srWindow.Top);
-	printf("%d\n", consoleInfo.srWindow.Left);
-	printf("%d\n", consoleInfo.srWindow.Right);
-	printf("%d\n", consoleInfo.srWindow.Bottom);
+	enum state state = IDLE;
 
-	while (1)
+	switch (HP)
 	{
-		Position(x, y);
-		printf("★");
-
-		key = _getch();
-
-		if (key == -32)
-		{
-			key = _getch();
-		}
-
-		switch (key)
-		{
-		case UP: if (y > 0) y--;
-			break ;
-		case LEFT: if (x > 0)x -= 2;
-			break ;
-		case RIGHT:	if (x < consoleInfo.srWindow.Right - 1)x += 2;
-			break ;
-		case DOWN : if (y < consoleInfo.srWindow.Bottom)y++;
-			break;
-		default: printf("Exception\n");
-			break;
-		}
-
-		system("cls");
+	case IDLE: printf("대기 상태\n");
+		break;
+	case ATTACK: printf("공격 상태\n");
+		break;
+	case DIE: printf("죽음 상태\n");
+		break;
+	default:
+		break;
 	}
+
+#pragma endregion
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), DARKBLUE);
+
+
+	printf("GYM");
 
 	return 0;
 }
