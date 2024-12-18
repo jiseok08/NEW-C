@@ -1,54 +1,70 @@
 #include <stdio.h>
 #include <WIndows.h>
 
-enum State
-{
-	IDLE,
-	ATTACK,
-	DIE
+#define WITDH 10
+#define HEIGHT 10
 
-	// 열거형에서 중간에 있는 상수의 값을 변경하게 되면
-	// 그 다음에 있는 상수의 값이 변경된 값에서부터 1씩 증가합니다.
+char maze[WITDH][HEIGHT] =
+{
+	{'0','1','1','0','0','0','1','1','1','1'},
+	{'0','1','1','0','1','0','1','0','1','1'},
+	{'0','0','0','0','1','0','1','0','1','1'},
+	{'1','1','1','1','1','0','0','0','1','1'},
+	{'1','1','1','1','1','0','1','0','1','1'},
+	{'1','0','0','0','1','0','1','1','1','1'},
+	{'1','0','1','0','1','0','0','0','0','0'},
+	{'1','0','1','0','1','1','1','1','1','0'},
+	{'0','0','1','0','1','1','1','1','0','0'},
+	{'1','1','1','0','0','0','0','0','0','1'}
 };
 
-enum Collar
+void Render()
 {
-	BLACK,
-	DARKBLUE,
-	DARKGREEN
-};
-// 0 BLACK
-// 1 DARKBLUE
-// 2 DARKGREEN
+	for (int i = 0; i < WITDH; i++)
+	{
+		for (int j = 0; j < HEIGHT; j++)
+		{
+			if (maze[i][j] == '0')
+			{
+				printf("□");
+			}
+			else
+			{
+				printf("■");
+			}
+		}
+
+		printf("\n");
+	}
+}
 
 int main()
 {
-#pragma region 열거형
-	// 고유한 상수 값에 연결된 기호 이름의
-	// 집합입니다.
+#pragma region (2)차원 배열
+	// 배열의 요소로 또 다른 배열을 가리는 배열입니다.
 
-	int HP = 0;
+	// int array2D[3][3] =
+	// {
+	// 	{1,2,3},
+	// 	{4,5,6},
+	// 	{7,8,9},
+	// };
+	// 
+	// for (int i = 0;i < 3; i++)
+	// {
+	// 	for (int j = 0; j < 3; j++)
+	// 	{
+	// 		printf("%d ", array2D[i][j]);
+	// 	}
+	// 	printf("\n");
+	// }
 
-	enum state state = IDLE;
-
-	switch (HP)
-	{
-	case IDLE: printf("대기 상태\n");
-		break;
-	case ATTACK: printf("공격 상태\n");
-		break;
-	case DIE: printf("죽음 상태\n");
-		break;
-	default:
-		break;
-	}
+	// 2차원 배열은 행과 열로 구분되며 앞에 있는 배열은
+	// 열을 의미하고, 뒤에 있는 배열은 행을 의미합니다.
 
 #pragma endregion
 
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), DARKBLUE);
-
-
-	printf("GYM");
+	Render();
 
 	return 0;
 }
