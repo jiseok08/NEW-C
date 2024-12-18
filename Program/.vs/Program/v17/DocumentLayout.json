@@ -1,10 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Program\\",
+  "WorkspaceRootPath": "C:\\Users\\\uD5C8\uC9C0\uC11D\\Desktop\\NEW-C\\Program\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{02FEDDAA-1D62-4A65-ACFF-A81EA4D5A8A3}|Program.vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Program\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{02FEDDAA-1D62-4A65-ACFF-A81EA4D5A8A3}|Program.vcxproj|C:\\Users\\\uD5C8\uC9C0\uC11D\\Desktop\\NEW-C\\Program\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{02FEDDAA-1D62-4A65-ACFF-A81EA4D5A8A3}|Program.vcxproj|solutionrelative:Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E9B686E-5377-4531-8CE9-0F697F1E71FC}|..\\Class4th (Color)\\Class4th (Color).vcxproj|C:\\Users\\\uD5C8\uC9C0\uC11D\\Desktop\\NEW-C\\Class4th (Color)\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +17,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Source.c",
+              "DocumentMoniker": "C:\\Users\\\uD5C8\uC9C0\uC11D\\Desktop\\NEW-C\\Class4th (Color)\\Source.c",
+              "RelativeDocumentMoniker": "..\\Class4th (Color)\\Source.c",
+              "ToolTip": "C:\\Users\\\uD5C8\uC9C0\uC11D\\Desktop\\NEW-C\\Class4th (Color)\\Source.c",
+              "RelativeToolTip": "..\\Class4th (Color)\\Source.c",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-12-18T23:34:17.584Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Source.c",
-              "DocumentMoniker": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Program\\Source.c",
+              "DocumentMoniker": "C:\\Users\\\uD5C8\uC9C0\uC11D\\Desktop\\NEW-C\\Program\\Source.c",
               "RelativeDocumentMoniker": "Source.c",
-              "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Program\\Source.c",
+              "ToolTip": "C:\\Users\\\uD5C8\uC9C0\uC11D\\Desktop\\NEW-C\\Program\\Source.c",
               "RelativeToolTip": "Source.c",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-12-10T09:10:44.189Z",
               "EditorCaption": ""
