@@ -4,29 +4,58 @@
 #include <time.h>
 #include <Windows.h>
 
-enum Over
-{
-	ace = 1,
-	J = 11,
-	Q,
-	k
-};
-
 struct Card
 {
 	int num;
+	int fnum;
+	char over;
 	char shape[10];
 };
 
 int main()
 {
+	int mamory[7];
+	char cmamory[7];
 	srand(time(NULL));
 	int fshape = 0;
 	struct Card Card;
 	{
 		for (int i = 1; i <= 7; i++)
 		{
-			Card.num = rand() % 10 + 1;
+			Card.num = 0;
+			Card.fnum = 0;
+			Card.num = rand() % 13 + 1;
+			switch (Card.num)
+			{
+				Card.fnum = 0;
+			case 1:
+				Card.over = 'A';
+			break;
+			case 2: Card.fnum = 2;
+				break;
+			case 3: Card.fnum = 3;
+				break;
+			case 4: Card.fnum = 4;
+				break;
+			case 5: Card.fnum = 5;
+				break;
+			case 6: Card.fnum = 6;
+				break;
+			case 7: Card.fnum = 7;
+				break;
+			case 8: Card.fnum = 8;
+				break;	 
+			case 9: Card.fnum = 9;
+				break;
+			case 10: Card.fnum = 10;
+				break;
+			case 11: Card.over = 'J';
+				break;
+			case 12: Card.over = 'Q';
+				break;
+			case 13: Card.over = 'K';
+				break;
+			}
 			fshape = rand() % 4 + 1;
 			switch (fshape)
 			{
@@ -59,8 +88,30 @@ int main()
 				Card.shape[3] = 'b';
 				Card.shape[4] = '\0';
 			}
-			printf("%d번 카드 : %s%d\n",i,Card.shape,Card.num);
+			mamory[i] = Card.fnum;
+			cmamory[i] = Card.over;
+			if (mamory[i] == mamory[i - 1])
+			{
+				i--;
+			}
+			else if (cmamory[i] == cmamory[i - 1])
+			{
+				i--;
+			}
+			else
+			{
+				if (Card.fnum != 0)
+				{
+					printf("%d번 카드 : %s %d\n", i, Card.shape, Card.fnum);
+				}
+				else if (Card.fnum == 0)
+				{
+					printf("%d번 카드 : %s %c\n", i, Card.shape, Card.over);
+				}
+			}
 		}
+
+		return 0;
 	}
 
 

@@ -1,15 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Program\\",
+  "WorkspaceRootPath": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Program\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF8C8A89-EDB0-427F-A04C-EFB140ACF304}|..\\Poker\\Poker.vcxproj|C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Poker\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBF0524E-E9FD-4097-99D3-B9FDC347D1C0}|..\\Class2th (Time)\\Class2th (Time).vcxproj|C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Class2th (Time)\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9B686E-5377-4531-8CE9-0F697F1E71FC}|..\\Class4th (Color)\\Class4th (Color).vcxproj|C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Class4th (Color)\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AF8C8A89-EDB0-427F-A04C-EFB140ACF304}|..\\Poker\\Poker.vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Poker\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,46 +13,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Source.c",
-              "DocumentMoniker": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Class4th (Color)\\Source.c",
-              "RelativeDocumentMoniker": "..\\Class4th (Color)\\Source.c",
-              "ToolTip": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Class4th (Color)\\Source.c",
-              "RelativeToolTip": "..\\Class4th (Color)\\Source.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-12-22T23:47:33.851Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Source.c",
-              "DocumentMoniker": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Class2th (Time)\\Source.c",
-              "RelativeDocumentMoniker": "..\\Class2th (Time)\\Source.c",
-              "ToolTip": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Class2th (Time)\\Source.c",
-              "RelativeToolTip": "..\\Class2th (Time)\\Source.c",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-12-22T23:56:41.262Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Source.c",
-              "DocumentMoniker": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Poker\\Source.c",
+              "DocumentMoniker": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Poker\\Source.c",
               "RelativeDocumentMoniker": "..\\Poker\\Source.c",
-              "ToolTip": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Poker\\Source.c*",
+              "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Poker\\Source.c*",
               "RelativeToolTip": "..\\Poker\\Source.c*",
-              "ViewState": "AgIAACsAAAAAAAAAAAAswD0AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-12-22T23:38:36.454Z",
+              "WhenOpened": "2024-12-23T09:00:32.181Z",
               "EditorCaption": ""
             }
           ]
