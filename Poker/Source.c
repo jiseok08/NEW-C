@@ -4,6 +4,8 @@
 #include <time.h>
 #include <Windows.h>
 
+#define SIZE 7
+
 struct Card
 {
 	int num;
@@ -14,13 +16,14 @@ struct Card
 
 int main()
 {
-	int mamory[7];
-	char cmamory[7];
+	int mamory[SIZE];
+	char cmamory[SIZE];
+	char smamory[10];
 	srand(time(NULL));
 	int fshape = 0;
 	struct Card Card;
 	{
-		for (int i = 1; i <= 7; i++)
+		for (int i = 0; i < SIZE; i++)
 		{
 			Card.num = 0;
 			Card.fnum = 0;
@@ -90,24 +93,43 @@ int main()
 			}
 			mamory[i] = Card.fnum;
 			cmamory[i] = Card.over;
-			if (mamory[i] == mamory[i - 1])
+			smamory[i] = Card.shape[1];
+			for (int j = 0; j < SIZE; j++)
 			{
-				i--;
-			}
-			else if (cmamory[i] == cmamory[i - 1])
-			{
-				i--;
-			}
-			else
-			{
-				if (Card.fnum != 0)
+				for (int k = 0; k < SIZE; k++)
 				{
-					printf("%d번 카드 : %s %d\n", i, Card.shape, Card.fnum);
+					if (smamory[SIZE - j] == smamory[SIZE - k])
+					{
+						if (mamory[SIZE - j] == mamory[SIZE - k])
+						{
+							i--;
+							j--;
+							k--;
+						}
+						else if (cmamory[SIZE - j] == cmamory[SIZE - k])
+						{
+							i--;
+							j--;
+							k--;
+						}
+						else
+						{
+
+						}
+					}
+					else
+					{
+
+					}
 				}
-				else if (Card.fnum == 0)
-				{
-					printf("%d번 카드 : %s %c\n", i, Card.shape, Card.over);
-				}
+			}
+			if (Card.fnum != 0)
+			{
+				printf("%d번 카드 : %s %d\n", i, Card.shape, Card.fnum);
+			}
+			else if (Card.fnum == 0)
+			{
+				printf("%d번 카드 : %s %c\n", i, Card.shape, Card.over);
 			}
 		}
 
