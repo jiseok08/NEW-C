@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Program\\",
+  "WorkspaceRootPath": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Program\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF8C8A89-EDB0-427F-A04C-EFB140ACF304}|..\\Poker\\Poker.vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Poker\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AF8C8A89-EDB0-427F-A04C-EFB140ACF304}|..\\Poker\\Poker.vcxproj|C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Poker\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Source.c",
-              "DocumentMoniker": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Poker\\Source.c",
+              "DocumentMoniker": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Poker\\Source.c",
               "RelativeDocumentMoniker": "..\\Poker\\Source.c",
-              "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\NEW-C\\Poker\\Source.c",
-              "RelativeToolTip": "..\\Poker\\Source.c",
-              "ViewState": "AgIAAEcAAAAAAAAAAADgv1wAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\\uD5C8\uC9C0\uC11D\\OneDrive\\Desktop\\NEW-C\\Poker\\Source.c*",
+              "RelativeToolTip": "..\\Poker\\Source.c*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-12-24T09:01:55.355Z",
+              "WhenOpened": "2024-12-26T02:31:07.128Z",
               "EditorCaption": ""
             }
           ]
