@@ -19,6 +19,8 @@ int main()
 {
 	srand(time(NULL));
 	int dup = 0;
+	int Straight = SIZE * SIZE;
+	int flush = 1;
 	struct Card Card;
 	{
 		for (int i = 0; i < SIZE; i++)
@@ -97,32 +99,44 @@ int main()
 				{
 					if (Card.shape[i] == Card.shape[j] && Card.num[i] == Card.num[j])
 					{
-						dup == 1;
+						dup = 1;
 					}
 				}
 
 			} while (dup == 1);
 
-				if (Card.fnum[i] != 0)
+			if (Card.fnum[i] != 0)
 			{
-				printf("%d번 카드 : %s %d\n", i, Card.shape, Card.fnum[i]);
+				printf("%d번 카드 : %s %d\n", i + 1, Card.shape, Card.fnum[i]);
 			}
-				   else if (Card.fnum[i] == 0)
+			else if (Card.fnum[i] == 0)
 			{
-				printf("%d번 카드 : %s %c\n", i, Card.shape, Card.over[i]);
-			}	
-			
+				printf("%d번 카드 : %s %c\n", i + 1, Card.shape, Card.over[i]);
+			}
+		}// for 끝
 
+		// 조합 맞추기
+
+
+
+
+
+
+		for (int a = 0; a < SIZE; a++)
+		{
+			for (int b = 0; b < SIZE; ++b)
+			{
+				if (Card.num[a] == Card.num[b])
+				{
+					Straight++;
+				}
+			}
 		}
+		printf("%d",flush);
 
-		return 0;
+
+
 	}
-
-
-
-
-
-
 
 
 
