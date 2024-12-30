@@ -1,19 +1,7 @@
 ﻿  Source.c
-C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(20,8): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(33,10): warning C4473: 'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-      C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(33,10):
-      자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 1개가 제공되었습니다.
-      C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(33,10):
-      누락된 variadic 인수 2이(가) 서식 문자열 '%c'에 필요합니다.
-      C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(33,10):
-      이 인수는 버퍼 크기로 사용됩니다.
-  
-C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(140,15): warning C4473: 'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-      C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(140,15):
-      자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 1개가 제공되었습니다.
-      C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(140,15):
-      누락된 variadic 인수 2이(가) 서식 문자열 '%c'에 필요합니다.
-      C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(140,15):
-      이 인수는 버퍼 크기로 사용됩니다.
-  
+C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(22,14): warning C4101: 'Card' :참조되지 않은 지역 변수입니다.
+C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(32,8): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(182,17): warning C4047: '함수': 'const char *const '의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(182,17): warning C4024: 'scanf_s': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\허봉식\Desktop\NEW-C\Poker\Source.c(183,16): warning C4552: '+': 식의 결과가 사용되지 않습니다.
   Poker.vcxproj -> C:\Users\허봉식\Desktop\NEW-C\Program\x64\Debug\Poker.exe

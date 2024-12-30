@@ -4,7 +4,9 @@
 #include <time.h>
 #include <Windows.h>
 
-#define SIZE 5
+#define SIZE 5 
+
+
 
 struct Card
 {
@@ -15,6 +17,16 @@ struct Card
 	char shape[10];
 };
 
+void Dealer()
+{
+	struct Card Card;
+
+
+}
+
+
+
+
 int main()
 {
 	srand(time(NULL));
@@ -23,15 +35,20 @@ int main()
 	int Straight = 0;
 	int flush = 0;
 	int money = 500;
+	int gmoney = 0;
+	int bmoney = 0;
+	int l = 0;
 	char play = TRUE;
 	char s = '0';
+	
 	
 
 	printf("당신은 도박장에 왔습니다.\n");
 	printf("당신의 전 재산은 %d원입니다.\n\n\n\n", money);
 	printf("기본 시작요금은 50원 입니다.\n");
-	printf("진행하시겠습니까?\n");
-	scanf_s("%c", &s);
+	printf("진행하시려면 y를 입력하세요.\n");
+	scanf_s(" %c", &s, 1);
+	system("cls");
 	if (s == 'y')
 	{
 		struct Card Card;
@@ -46,6 +63,7 @@ int main()
 						dup = 0;
 						Straight = 0;
 						flush = 0;
+						gmoney = 50;
 
 						Card.fnum[i] = 0;
 						Card.num[i] = 0;
@@ -80,9 +98,12 @@ int main()
 						case 13: Card.over[i] = 'K';
 							break;
 						}
-						Card.fshape[i] = rand() % 4 + 1;
-						switch (Card.fshape[i])
+						for (int k = 0; k < 5; k++)
 						{
+							Card.fshape[i] = rand() % 4 + 1;
+						}
+						switch (Card.fshape[i])
+						{ 
 						case 1: Card.shape[0] = 'S';
 							Card.shape[1] = 'p';
 							Card.shape[2] = 'a';
@@ -121,28 +142,64 @@ int main()
 						}
 					} while (dup == 1);
 
-					if (Card.num[i - 1] == Card.num[i])
+					l = 0;
+					system("cls");
+					for (l; l <= i; l++)
 					{
-						Straight++;
-					}
-
-					if (Card.fnum[i] != 0)
-					{
-						printf("%d번 카드 : %s %d\n", i + 1, Card.shape, Card.fnum[i]);
-					}
-					else if (Card.fnum[i] == 0)
-					{
-						printf("%d번 카드 : %s %c\n", i + 1, Card.shape, Card.over[i]);
-					}
-
-					if (i <= 2)
-					{
-						printf("판돈을 올리시겠습니까?\n");
-						scanf_s("%c", &s);
-						if (s == 'y')
+						
+						if (Card.fnum[l] != 0)
 						{
-
+							printf("당신의 %d번 카드 : %s %d\n", l + 1, Card.shape, Card.fnum[l]);
 						}
+						else if (Card.fnum[l] == 0)
+						{
+							printf("당신의 %d번 카드 : %s %c\n", l + 1, Card.shape, Card.over[l]);
+						}
+					}
+
+
+
+
+
+					if (i > 1)
+					{
+						do
+						{
+							s = '0';
+							printf("CALL, RALSE, FOLD 중 하나를 선택하여 선택한 행동의 앞 글자만 입력해 주십시오.\n");
+							s = 'a';
+							scanf_s(" %c", &s, 1);
+							if (s == 'C' || s == 'c')
+							{
+								printf("CALL을 선택하셨습니다. 게속 진행됩니다.\n");
+								system("PAUSE");
+								s = 'a';
+							}
+							else if (s == 'R' || s == 'r')
+							{
+								printf("RALSE를 선택하셨습니다.\n");
+								printf("배팅할 금액을 입력해 주십시오.\n");
+								scanf_s(' %d', &bmoney, 1);
+								gmoney + bmoney;
+								bmoney = 0;
+								s = 'a';
+							}
+							else if (s == 'F' || s == 'f')
+							{
+								printf("FOLD를 선택하셨습니다.\n");
+								printf("게임을 다시 시작합니다.\n");
+								system("PAUSE");
+								s = 'a';
+							}
+							else
+							{
+								printf("잘못된 입력입니다.\n");
+								printf("다시 입력해 주십시오.\n");
+								system("PAUSE");
+							}
+							system("cls");
+							
+						} while (s != 'a');
 					}
 					if (i != 0)
 					{
@@ -159,7 +216,7 @@ int main()
 						}
 					}
 
-				}
+				} // for 문 끝
 				if (flush == SIZE && Straight == SIZE)
 				{
 					score = 10;
@@ -184,7 +241,7 @@ int main()
 
 
 
-
+				system("cls");
 
 				// if (money <= 0)
 				// {
@@ -204,6 +261,7 @@ int main()
 		printf("게임을 포기하셨습니다\n\n\n");
 		printf("게임을 종료합니다\n");
 		system("PAUSE");
+		return 0;
 	}
 
 
