@@ -30,6 +30,9 @@ int main()
 	int bmoney = 0;
 	int dupc = 0;
 	int a = 0;
+	int y = 0;
+	int pair = 0;
+	int dpair = 0;
 	char play = TRUE;
 	char s = '0';
 
@@ -49,11 +52,14 @@ int main()
 			struct Card Card;
 			{
 				while (play == TRUE)
-				{
+				{	
+					a = 0;
+					y = 0;
 					gmoney = 50;
 					bmoney = 0;
 					money -= gmoney;
-					gmoney * 2;
+					gmoney *= 2;
+					score = 0;
 					for (int i = 0; i < SIZE; i++)
 					{
 						do
@@ -141,24 +147,28 @@ int main()
 						} while (dup == 1);
 					}
 
-
+					
 
 					for (int i = 0; i < 5; i++)
 					{
-						do
+						if (i == 5)
 						{
-							system("cls");
-							s = '0';
-							printf("당신의 자산 : %d\n\n", money);
-							printf("게임의 판돈 : %d\n\n", gmoney);
-							printf("CALL, RALSE, FOLD 중 하나를 선택하여 선택한 행동의 앞 글자만 입력해 주십시오.\n");
-							printf("CALL : 판돈 유지\n");
-							printf("RALSE : 배팅\n");
-							printf("FOLD : 다이\n\n\n");
-
-							for (int k = 3; k < 4 + i; k++)
+						}
+						else
+						{
+							do
 							{
-								for (int j = 0; j < k; j++)
+
+								system("cls");
+								s = '0';
+								printf("당신의 자산 : %d\n\n", money);
+								printf("게임의 판돈 : %d\n\n", gmoney);
+								printf("CALL, RALSE, FOLD 중 하나를 선택하여 선택한 행동의 앞 글자만 입력해 주십시오.\n");
+								printf("CALL : 판돈 유지\n");
+								printf("RALSE : 배팅\n");
+								printf("FOLD : 다이\n\n\n");
+
+								for (int j = 0; j <= i; j++)
 								{
 									if (Card.fnum[j] != 0)
 									{
@@ -169,101 +179,175 @@ int main()
 										printf("당신의 %d번 카드 : %s %c\t", j + 1, Card.shape[j], Card.over[j]);
 									}
 
-									if (k < 2)
+									if (j < 2)
 									{
 										printf("딜러의 %d번 카드 : ???\n", j + 1);
 									}
 									else
 									{
-										if (Card.fnum[k + (SIZE / 2)] != 0)
+										if (Card.fnum[j + 5] != 0)
 										{
 											printf("딜러의 %d번 카드 : %s %d\n", j + 1, Card.shape[j + (SIZE / 2)], Card.fnum[j + (SIZE / 2)]);
 										}
-										else if (Card.fnum[k + (SIZE / 2)] == 0)
+										else if (Card.fnum[j + 5] == 0)
 										{
 											printf("딜러의 %d번 카드 : %s %c\n", j + 1, Card.shape[j + (SIZE / 2)], Card.over[j + (SIZE / 2)]);
 										}
 									}
+									
+
 								}
-							}
 
-							s = 'a';
-							scanf_s(" %c", &s, 1);
-							if (s == 'C' || s == 'c')
-							{
-								printf("CALL을 선택하셨습니다. 게속 진행됩니다.\n");
-								system("PAUSE");
+
 								s = 'a';
-							}
-							else if (s == 'R' || s == 'r')
-							{
-								printf("RALSE를 선택하셨습니다.\n");
-								printf("배팅할 금액을 입력해 주세요.\n");
-
-								scanf_s(" %d", &bmoney);
-								if (bmoney > money)
+								scanf_s(" %c", &s, 1);
+								if (s == 'C' || s == 'c')
 								{
-									printf("당신의 자산 : %d\n\n\n", money);
-									printf("다시 입력해 주세요.\n");
+									printf("CALL을 선택하셨습니다. 게속 진행됩니다.\n");
+									system("PAUSE");
+									s = 'a';
+								}
+								else if (s == 'R' || s == 'r')
+								{
+									printf("RALSE를 선택하셨습니다.\n");
+									printf("배팅할 금액을 입력해 주세요.\n");
+
+									scanf_s(" %d", &bmoney);
+									if (bmoney > money)
+									{
+										printf("당신의 자산 : %d\n\n\n", money);
+										printf("다시 입력해 주세요.\n");
+									}
+
+									system("PAUSE");
+									system("cls");
+									gmoney += (bmoney * 2);
+									money -= bmoney;
+									bmoney = 0;
+									s = 'a';
+								}
+								else if (s == 'F' || s == 'f')
+								{
+									printf("FOLD를 선택하셨습니다.\n");
+									printf("게임을 다시 시작합니다.\n");
+									system("PAUSE");
+									system("cls");
+									s = 'a';
+									i = 100;
+								}
+								else
+								{
+									printf("잘못된 입력입니다.\n");
+									printf("다시 입력해 주십시오.\n");
+									system("PAUSE");
 								}
 
-								system("PAUSE");
-								system("cls");
-								gmoney += bmoney;
-								money -= bmoney;
-								bmoney = 0;
-								s = 'a';
-							}
-							else if (s == 'F' || s == 'f')
-							{
-								printf("FOLD를 선택하셨습니다.\n");
-								printf("게임을 다시 시작합니다.\n");
-								system("cls");
-								system("PAUSE");
-								s = 'a';
-								i = 100;
-							}
-							else
-							{
-								printf("잘못된 입력입니다.\n");
-								printf("다시 입력해 주십시오.\n");
-								system("PAUSE");
-							}
-							
 
-						} while (s != 'a');
-
+							} while (s != 'a');
+						}
 					}
-					for (int i = 0; i < (SIZE / 2); i++)
+					for (int i = 0; i < 5; i++)
 					{
-						if (Card.num[i] == Card.num[i])
+						for (int j = 0; j < i; j++)
 						{
-							Straight++;
+							if (Card.num[i] == Card.num[j])
+							{
+								Straight++;
+							}
+
+							if (Card.fshape[i] == Card.fshape[j])
+							{
+								flush++;
+							}
+						}
+					}
+
+
+					for (int i = 0; i < SIZE; i++)
+					{
+						for (int j = 0; j < i; j++)
+						{
+							if (Card.num[i] == Card.num[j])
+							{
+								pair++;
+							}
+
+						}
+					}
+
+					for (int d = 0; d < 3; d++)
+					{
+						printf("%d ", Card.num[5 + d]);
+					}
+
+					for (int i = 0; i < SIZE; i++)
+					{
+						for (int j = 0; j < i; j++)
+						{
+							if (Card.num[i + (SIZE / 2)] == Card.num[j + (SIZE / 2)])
+							{
+								dpair++;
+							}
+
+						}
+					}
+
+					if (flush == 5 && Straight == 5)
+					{
+						printf("(Straight Flush)\n");
+						score = 500;
+					}
+					else if (flush == 5)
+					{
+						
+						printf("당신의 패 :Flush\n");
+						score = 400;
+					}
+					else if (Straight == 5)
+					{
+						printf("(스트레이트)\n");
+						score = 300;
+					}
+
+					else
+					{
+						switch (pair)
+						{
+						case 1: printf("당신의 패 : ONE PAIR\n");
+							score = 14;
+						case 2:	printf("당신의 패 : TWO PAIR\n");
+							score = 15;
+						case 3:	printf("당신의 패 : THREE PAIR\n");
+							score = 16;
+						case 4:	printf("당신의 패 : Straight Flush\n");
+							score = 17;
 						}
 
-						if (Card.fshape[i] == Card.fshape[i])
+
+						switch (dpair)
 						{
-							flush++;
+						case 1: printf("딜러의 패 : ONE PAIR\n");
+							score = 14;
+						case 2:	printf("딜러의 패 : TWO PAIR\n");
+							score = 15;
+						case 3:	printf("딜러의 패 : THREE PAIR\n");
+							score = 16;
+						case 4:	printf("딜러의 패 : FOUR CARD\n");
+							score = 17;
 						}
 					}
 
 					
-					if (flush == SIZE && Straight == SIZE)
-					{
-						score = 10;
-						printf("(스트레이트 플러쉬)\n");
-					}
-					else if (Straight == SIZE)
-					{
-						score = 9;
-						printf("(스트레이트)\n");
-					}
-					else if (flush == SIZE)
-					{
-						score = 8;
-						printf("(플러쉬)\n");
-					}
 
+
+
+					if (money <= 0)
+					{
+						printf("당신은 파산하였습니다.\n\n\n");
+						printf("G A M E   O V E R\n");
+						system("PAUSE");
+						play = FALSE;
+					}
 
 					system("cls");
 
