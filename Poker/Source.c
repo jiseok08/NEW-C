@@ -183,7 +183,7 @@ int main()
 
 					
 
-					for (int i = 0; i < 3; i++)
+					for (int i = 0; i < 2; i++)
 					{
 
 						do
@@ -556,17 +556,23 @@ int main()
 
 					else if (score == 100 && dscore == 100)
 					{
-						for (int i = 1; i < 13; i++)
+						for (int i = 1; i <= 13; i++)
 						{
 							if (numberCount[i] == 2)
 							{
 								highestOnePair = i;
+								break;
 							}
+						}
+						for (int i = 1; i <= 13; i++)
+						{
 							if (dnumberCount[i] == 2)
 							{
 								dhighestOnePair = i;
+								break;
 							}
 						}
+						
 
 						if (highestOnePair == 1 && dhighestOnePair == 1)
 						{ }
