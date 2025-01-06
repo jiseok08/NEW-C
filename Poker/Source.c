@@ -45,7 +45,7 @@ int main()
 
 
 	printf("당신은 도박장에 왔습니다.\n");
-	printf("당신의 목표는 2000원을 모으는 것 입니다.\n\n");
+	printf("당신의 목표는 3000원을 모으는 것 입니다.\n\n");
 
 	printf("당신의 전 재산은 %d원입니다.\n\n\n\n", money);
 	printf("기본 시작요금은 50원 입니다.\n");
@@ -692,7 +692,7 @@ int main()
 					system("PAUSE");
 
 
-					if (money > 2000)
+					if (money >= 3000)
 					{
 						printf("축하합니다, 당신은 부자가 되었습니다!\n\n\n");
 						printf("G A M E   C L E A R\n");
